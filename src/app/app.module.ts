@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LibreriaComponent } from './components/libreria/libreria.component';
 import { ComicComponent } from './components/comic/comic.component';
 import { FormsModule } from '@angular/forms';
+import { ServiceComics } from './services/service.comics';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServiceComics],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
