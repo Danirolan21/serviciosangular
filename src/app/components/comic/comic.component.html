@@ -1,0 +1,23 @@
+<div *ngIf="comic; else condicionelse" class="comic">
+    <img src={{comic.imagen}} alt="">
+    <h3 class="pl-5" style="color: lightcoral;">
+        {{comic.titulo}}
+    </h3>
+    <p class="pl-5">
+        {{comic.descripcion}}
+    </p>
+    <button (click)="seleccionarFavoritoComic()">
+        Seleccionar Favorito
+    </button>
+</div>
+<ng-template #condicionelse>
+    <div class="comic">
+        <img src={{comicFavorite.imagen}} alt="">
+        <h3 class="pl-5" style="color: lightcoral;">
+            {{comicFavorite.titulo}}
+        </h3>
+        <p class="pl-5">
+            {{comicFavorite.descripcion}}
+        </p>
+    </div>
+</ng-template>
